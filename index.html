@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro P. em Movimento - A Jornada de um Corredor</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card {
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .progress-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #3b82f6;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages-wixmp-ed30a86b8c4ca887773594c2.wixmp.com%2Ff%2Fd7c5ebe6-8809-43ab-880d-fc8d4a30e3d3%2Fdbrqktc-53b61eab-4d2d-4121-81db-ba4296cc2159.gif%3Ftoken%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q3YzVlYmU2LTg4MDktNDNhYi04ODBkLWZjOGQ0YTMwZTNkM1wvZGJycWt0Yy01M2I2MWVhYi00ZDJkLTQxMjEtODFkYi1iYTQyOTZjYzIxNTkuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.2GCxF9iL0c6gyMfds9GewmUReSjChNIY4GrxGrlsE4A&f=1&nofb=1&ipt=3e24c19c4448fafcb431d09eef30d7620cb058b6e8b218b7885e6619304ff230" alt="Logo" class="rounded-full h-12 w-12 mr-3">
+                <h1 class="text-2xl font-bold text-gray-800">Pedro P. - em Movimento</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-gray-800 hover:text-blue-600 font-medium">Início</a></li>
+                    <li><a href="#about" class="text-gray-800 hover:text-blue-600 font-medium">Sobre Mim</a></li>
+                    <li><a href="#workouts" class="text-gray-800 hover:text-blue-600 font-medium">Treinos</a></li>
+                    <li><a href="#tips" class="text-gray-800 hover:text-blue-600 font-medium">Dicas</a></li>
+                    <li><a href="#runs" class="text-gray-800 hover:text-blue-600 font-medium">Registros</a></li>
+                    <li><a href="#contact" class="text-gray-800 hover:text-blue-600 font-medium">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-gray-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <section id="home" class="hero h-96 flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Corra. Supere. Transforme.</h1>
+            <p class="text-xl mb-8">Junte-se a mim nesta jornada de autodescoberta através da corrida</p>
+            <button class="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg">
+                Comece Sua Aventura
+            </button>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Sobre Mim</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.4Jqza3Tixv_YFTS_ekG-pAHaHa%26cb%3Diwp2%26pid%3DApi&f=1&ipt=fa3bab4ffbb4e8b733c7073a6ceb794c7865aa30f155b222260a8dd74efee96b&ipo=images" alt="Evento de corrida" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Minha Jornada na Corrida</h3>
+                    <p class="text-gray-700 mb-4">
+                    Não fui eu quem escolheu correr. Um dia, o corpo simplesmente se moveu — e algo em mim seguiu.
+No começo havia esforço, metas, fuga talvez. Mas com o tempo, a corrida deixou de ser um fazer. 
+                    <p class="text-gray-700 mb-4">
+                        Percebi que a Vida não se apressa. E quando deixo o controle, o passo acontece por si só, como o vento atravessando as árvores — sem intenção.
+                    </p>
+                   <p class="mb-4">
+  Hoje, correr é um gesto de escuta. Cada passada revela silêncio, cada respiração dissolve o “eu”.  
+  Não sou alguém tentando chegar. Sou o próprio caminho em movimento.
+</p>
+<p>
+  Como disse Lao Tzu, <em>“A natureza nunca se apressa, e mesmo assim tudo é realizado.”</em>  
+  Correr, para mim, é isso: não conquistar a vida — mas acompanhá-la, passo a passo, momento a momento.
+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<div style="max-width: 960px; margin: 40px auto; padding: 20px;">
+  <h2 class="text-2xl font-bold mb-4 text-center text-gray-800">Treinos Recentes</h2>
+  <div class="overflow-x-auto">
+    <table class="table-auto w-full text-left border-collapse">
+      <thead>
+        <tr class="bg-blue-100">
+          <th class="px-4 py-2 border">Data</th>
+          <th class="px-4 py-2 border">Treino</th>
+          <th class="px-4 py-2 border">Distância</th>
+          <th class="px-4 py-2 border">Tempo</th>
+          <th class="px-4 py-2 border">FC Média</th>
+          <th class="px-4 py-2 border">Avg Pace</th>
+          <th class="px-4 py-2 border">Best Pace</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-23-corrida.html" class="text-blue-600 hover:underline">2025-05-23</a>
+            </td>
+                <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">6,43</td>
+            <td class="border px-4 py-2">01:10:44</td>
+            <td class="border px-4 py-2">141</td>
+            <td class="border px-4 py-2">11:00*</td>
+            <td class="border px-4 py-2">5:40</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-16-corrida.html" class="text-blue-600 hover:underline">2025-05-16</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">5,20</td>
+            <td class="border px-4 py-2">01:00:24</td>
+            <td class="border px-4 py-2">157</td>
+            <td class="border px-4 py-2">11:37*</td>
+            <td class="border px-4 py-2">5:27</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-13-corrida.html" class="text-blue-600 hover:underline">2025-05-13</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">5,02</td>
+            <td class="border px-4 py-2">01:00:09</td>
+            <td class="border px-4 py-2">163</td>
+            <td class="border px-4 py-2">11:58</td>
+            <td class="border px-4 py-2">4:38</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-08-corrida.html" class="text-blue-600 hover:underline">2025-05-08</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">2,77</td>
+            <td class="border px-4 py-2">00:28:06</td>
+            <td class="border px-4 py-2">137</td>
+            <td class="border px-4 py-2">10:10*</td>
+            <td class="border px-4 py-2">5:41</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-08-corrida.html" class="text-blue-600 hover:underline">2025-05-08</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">2,44</td>
+            <td class="border px-4 py-2">00:25:46</td>
+            <td class="border px-4 py-2">131</td>
+            <td class="border px-4 py-2">10:33</td>
+            <td class="border px-4 py-2">5:35</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-06-corrida.html" class="text-blue-600 hover:underline">2025-05-06</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">1,35</td>
+            <td class="border px-4 py-2">00:12:47</td>
+            <td class="border px-4 py-2">156</td>
+            <td class="border px-4 py-2">9:30*</td>
+            <td class="border px-4 py-2">4:26</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-06-corrida.html" class="text-blue-600 hover:underline">2025-05-06</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">3,20</td>
+            <td class="border px-4 py-2">00:30:01</td>
+            <td class="border px-4 py-2">151</td>
+            <td class="border px-4 py-2">9:22*</td>
+            <td class="border px-4 py-2">5:33</td>
+        </tr>
+
+        <tr class="bg-white hover:bg-gray-50">
+            <td class="border px-4 py-2">
+                <a href="blog_posts/2025-05-05-corrida.html" class="text-blue-600 hover:underline">2025-05-05</a>
+            </td>
+            <td class="border px-4 py-2">Esteira</td>
+            <td class="border px-4 py-2">6,97</td>
+            <td class="border px-4 py-2">01:13:11</td>
+            <td class="border px-4 py-2">150</td>
+            <td class="border px-4 py-2">10:30*</td>
+            <td class="border px-4 py-2">5:32</td>
+        </b>
+        </tr>
+
+      </tbody>
+    </table>
+    <p class="text-sm text-gray-600 italic mt-4 text-center">
+    * Pace referente a treino intercalado em esteira.
+</p>
+  </div>
+</div>
+
+<!-- Seção Treinos -->
+    <section id="workouts" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Planos de Treino</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Plano Iniciante -->
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-walking text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Plano Iniciante</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Perfeito para quem está começando sua jornada na corrida. Este plano de 8 semanas levará você de caminhar a correr 5K.</p>
+                    <ul class="mb-6 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check text-blue-600 mr-2"></i> 3 treinos por semana</li>
+                        <li class="mb-2"><i class="fas fa-check text-blue-600 mr-2"></i> Intervalos de caminhada e corrida</li>
+                        <li class="mb-2"><i class="fas fa-check text-blue-600 mr-2"></i> Noções básicas de treino de força</li>
+                        <li><i class="fas fa-check text-blue-600 mr-2"></i> Orientação nutricional</li>
+                    </ul>
+                    <button class="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full w-full">
+                        Baixar Plano (Em breve)
+                    </button>
+                </div>
+                
+                <!-- Plano Intermediário -->
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-running text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Plano Intermediário</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Para corredores que já correm 5K confortavelmente e querem melhorar velocidade e resistência para 10K.</p>
+                    <ul class="mb-6 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check text-green-600 mr-2"></i> 4-5 treinos por semana</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-600 mr-2"></i> Treinos de velocidade e ritmo</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-600 mr-2"></i> Treino de força</li>
+                        <li><i class="fas fa-check text-green-600 mr-2"></i> Nutrição avançada</li>
+                    </ul>
+                    <button class="btn-primary bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-full w-full">
+                        Baixar Plano (Em breve)
+                    </button>
+                </div>
+                
+                <!-- Plano Avançado -->
+                <div class="card bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-trophy text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Plano Avançado</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Para corredores experientes que desejam completar uma maratona ou melhorar seu tempo.</p>
+                    <ul class="mb-6 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check text-purple-600 mr-2"></i> 5-6 treinos por semana</li>
+                        <li class="mb-2"><i class="fas fa-check text-purple-600 mr-2"></i> Longões de até 32km</li>
+                        <li class="mb-2"><i class="fas fa-check text-purple-600 mr-2"></i> Treino de velocidade avançado</li>
+                        <li><i class="fas fa-check text-purple-600 mr-2"></i> Estratégia de prova</li>
+                    </ul>
+                    <button class="btn-primary bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-full w-full">
+                        Baixar Plano (Em breve)
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md max-w-2xl mx-auto">
+                <h3 class="text-2xl font-semibold mb-4 text-center text-gray-800">Receba Conselhos de Treino Personalizados (Em breve)</h3>
+                <form>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="level">Nível Atual de Corrida</label>
+                        <select id="level" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <option>Iniciante (0-5K)</option>
+                            <option>Intermediário (5K-10K)</option>
+                            <option>Avançado (10K+)</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="goal">Objetivo</label>
+                        <select id="goal" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                            <option>Completar 5K</option>
+                            <option>Melhorar tempo de 5K</option>
+                            <option>Completar 10K</option>
+                            <option>Completar meia maratona</option>
+                            <option>Completar maratona</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2" for="email">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <button type="submit" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full w-full">
+                        Obter Plano Personalizado (Em breve)
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Dicas -->
+    <section id="tips" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Dicas e Truques para Corrida</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Técnica -->
+                <div class="card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-shoe-prints text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Técnica de Corrida</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">A postura correta pode ajudar a prevenir lesões e melhorar a eficiência. Foque nestes elementos:</p>
+                    <ul class="mb-4 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check-circle text-yellow-600 mr-2"></i> Mantenha a postura ereta e relaxada</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-yellow-600 mr-2"></i> Pise com o meio do pé, não com o calcanhar</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-yellow-600 mr-2"></i> Mantenha os braços em 90 graus, balançando para frente e para trás</li>
+                        <li><i class="fas fa-check-circle text-yellow-600 mr-2"></i> Mantenha uma cadência rápida (170-180 passos por minuto)</li>
+                    </ul>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-600 italic">"Foque em um elemento por vez durante seus treinos para melhorar gradualmente sua técnica."</p>
+                    </div>
+                </div>
+                
+                <!-- Equipamento -->
+                <div class="card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-tshirt text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Equipamento Essencial</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">Ter o equipamento certo pode tornar suas corridas mais confortáveis e prazerosas. Veja o que você precisa:</p>
+                    <ul class="mb-4 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check-circle text-red-600 mr-2"></i> Tênis adequados (troque a cada 500-800km)</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-red-600 mr-2"></i> Roupas com tecido que absorva o suor</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-red-600 mr-2"></i> Relógio GPS ou app para acompanhamento</li>
+                        <li><i class="fas fa-check-circle text-red-600 mr-2"></i> Equipamento refletivo para corridas noturnas</li>
+                    </ul>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-600 italic">"Invista em bons tênis - eles são o equipamento mais importante para um corredor."</p>
+                    </div>
+                </div>
+                
+                <!-- Nutrição -->
+                <div class="card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-apple-alt text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Nutrição para Corredores</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">O que você come afeta seu desempenho e recuperação. Siga estas dicas nutricionais:</p>
+                    <ul class="mb-4 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check-circle text-green-600 mr-2"></i> Hidrate-se bem antes, durante e depois das corridas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-green-600 mr-2"></i> Coma uma refeição rica em carboidratos 2-3 horas antes de longões</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-green-600 mr-2"></i> Reponha com proteína após os treinos para recuperação muscular</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Considere reposição de eletrólitos para corridas acima de 60 minutos</li>
+                    </ul>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-600 italic">"Não experimente comidas novas antes de provas - fique com o que funciona para seu estômago."</p>
+                    </div>
+                </div>
+                
+                <!-- Recuperação -->
+                <div class="card bg-gray-100 p-6 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-spa text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Estratégias de Recuperação</h3>
+                    </div>
+                    <p class="text-gray-700 mb-4">A recuperação adequada é essencial para evitar lesões e melhorar o desempenho:</p>
+                    <ul class="mb-4 text-gray-700">
+                        <li class="mb-2"><i class="fas fa-check-circle text-purple-600 mr-2"></i> Descanse o suficiente entre os treinos</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-purple-600 mr-2"></i> Faça alongamentos após as corridas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-purple-600 mr-2"></i> Considere massagem ou rolo de espuma</li>
+                        <li><i class="fas fa-check-circle text-purple-600 mr-2"></i> Durma bem para permitir a recuperação muscular</li>
+                    </ul>
+                    <div class="bg-white p-4 rounded-lg">
+                        <p class="text-sm text-gray-600 italic">"O descanso faz parte do treino - não subestime seu poder de recuperação."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
