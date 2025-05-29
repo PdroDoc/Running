@@ -235,6 +235,38 @@
   </div>
 </div>
 
+<canvas id="chartDist" width="400" height="200" style="margin-top: 40px;"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('chartDist').getContext('2d');
+new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['2025-05-05', '2025-05-06', '2025-05-06', '2025-05-08', '2025-05-08', '2025-05-13', '2025-05-16', '2025-05-23', '2025-05-26', '2025-05-28'],
+        datasets: [{
+            label: 'Distância (km)',
+            data: [6.97, 3.2, 1.35, 2.44, 2.77, 5.02, 5.2, 6.43, 8.0, 5.64],
+            fill: false,
+            borderColor: 'rgb(75, 192, 192)',
+            tension: 0.1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'top'
+            },
+            title: {
+                display: true,
+                text: 'Evolução das Corridas'
+            }
+        }
+    }
+});
+</script>
+
 <!-- Seção Treinos -->
     <section id="workouts" class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
